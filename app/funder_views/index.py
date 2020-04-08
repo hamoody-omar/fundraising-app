@@ -10,7 +10,7 @@ def index(request):
     for donor in donors:
         total += donor.amount
     donation.amount = total
-    donation.goal=500000
+    donation.goal=10000
     donation.save()
     context_dict['goal']=donation.goal
     context_dict['total'] = total
