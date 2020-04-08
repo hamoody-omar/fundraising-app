@@ -16,10 +16,17 @@
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{% static 'app/business-frontpage.css' %}">
+ 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
+
 
   <!-- Navigater -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -63,15 +70,39 @@
 
   <!-- Page Content -->
   <div class="container">
-
+    
+          
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>{{campaign_name}} Campaign</h2>
         <hr>
-        <p>For the {{campaign_name}} campaign, we have raised <span style="color: green, font-size: 24">${{total}}</span> so far.</p>
+        <p>For the {{campaign_name}} campaign, we have raised <span style="color: green;font-size:x-large;">${{total}}</span> so far with a goal of 
+          <span style="color:red; font-size:x-large;">${{goal}}</span>.</p>
+          {%if percent >= 100 %}
+          <p>Thanks to your help, we have met our goal!</p>
+          {%endif%}
+        
+        <div class="progress" style="height:30px; margin-bottom:2em;">
+          {% if percent >= 100 %}
+          <div class="progress-bar" role="progressbar" aria-valuenow="100"
+          aria-valuemin="0" aria-valuemax="100" style="width:100%;">
+            100%
+          </div>
+          {% else %}
+          <div class="progress-bar" role="progressbar" aria-valuenow="{{percent}}"
+          aria-valuemin="0" aria-valuemax="100" style="width:{{percent}}%;">
+            {{percent}}%
+          </div>
+          {%endif%}
+        </div>
+
         <p>Donate today and be part of our lives saving work.</p>
         <a class="btn btn-primary btn-lg" href="/donate/">Donate Today &raquo;</a>
+
+        
       </div>
+      
+  
       <div class="col-md-4 mb-5">
         <h2>Contact Us</h2>
         <hr>
@@ -143,9 +174,7 @@
     <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
 
 </body>
 

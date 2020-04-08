@@ -10,6 +10,9 @@ def index(request):
     for donor in donors:
         total += donor.amount
     donation.amount = total
+    donation.goal=500000
     donation.save()
+    context_dict['goal']=donation.goal
     context_dict['total'] = total
+    context_dict['percent']=round(total/donation.goal*100)
     return render(request, 'app/index.html', context_dict)
