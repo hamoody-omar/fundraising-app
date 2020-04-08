@@ -1,5 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
+
 <head>
 
   <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
@@ -11,87 +12,107 @@
 
 <!-- Navigator -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Donation Page</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container">
+    <a class="navbar-brand" href="#">Donation Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 <body>
-<div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-      <h3 class="panel-title">Personal Information</h3>
-  </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Personal Information</h3>
+          </div>
 
-  <div class="panel-body">
+          <div class="panel-body">
 
-<div class="bodyTest">
-  <form class="">
+            <div class="bodyTest">
+              <form class="">
 
-<div class="row">
-  <div class="col-sm-6">
-    <!-- first name input-->
-    <div class="form-group">
-        <label for="firstname" class="control-label">First Name</label>
-        <div class="">
-            <input id="first-name" name="firstname" type="text" autocomplete="first-name" placeholder="first name" class="form-control">
-            <p class="help-block"></p>
-        </div>
-    </div>
-  </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <!-- first name input-->
+                    <div class="form-group">
+                      <label for="firstname" class="control-label">First Name</label>
+                      <div class="">
+                        <input id="first-name" name="firstname" type="text" autocomplete="first-name"
+                          placeholder="First Name" class="form-control">
+                        <p class="help-block"></p>
+                      </div>
+                    </div>
+                  </div>
 
 
-<div class="col-sm-6">
-  <div class="form-group">
-      <label for="lastname" class="control-label">Last Name</label>
-      <div class="">
-          <input id="last-name" name="lastname" type="text" autocomplete="last-name" placeholder="last name" class="form-control">
-          <p class="help-block"></p>
-      </div>
-  </div>
-</div>
-</div>
-       <!-- last name input-->
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="Last Name" class="control-label">Last Name</label>
+                      <div class="">
+                        <input id="Last-Name" name="LastName" type="text" autocomplete="Last-Name"
+                          placeholder="Last Name" class="form-control">
+                        <p class="help-block"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- last name input-->
 
-<div class="row">
-  <div class="col-sm-12">
-    <!-- company input-->
-    <div class="control-group">
-        <label for="company" class="control-label ">Company / Organization</label>
-        <div class="">
-            <input id="company" name="company" type="text" autocomplete="organization" placeholder="company or organization (optional)" class="form-control">
-            <p class="help-block"></p>
-        </div>
-    </div>
-  </div>
-</div>
-       <!-- address-line1 input-->
-       <div class="row">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <!-- company input-->
+                    <div class="control-group">
+                      <label for="company" class="control-label ">Company / Organization</label>
+                      <div class="">
+                        <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company or Organization (Optional)" 
+                          class="form-control">
+                        <p class="help-block"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
 
-         <div class="col-sm-6">
+                  <!-- Email Address input-->
+                  <div class="col-sm-12">
+                  <div class="control-group">
+                    <label for="company" class="control-label ">Email Address</label>
+                    <div class="">
+                      <input id="company" name="company" type="text" autocomplete="organization" placeholder="Email Address" 
+                        class="form-control">
+                      <p class="help-block"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-sm-12">
+
+              <!-- address-line1 input
+         <div class="col-sm-6"><div class="col-sm-6">
            <div class="control-group">
                <label class="control-label ">Address Line 1</label>
                <div class=" ">
@@ -100,7 +121,7 @@
                </div>
            </div>
          </div>
-         <!-- address-line2 input-->
+         address-line2 input
         <div class="col-sm-6">
           <div class="control-group">
              <label class="control-label">Address Line 2</label>
@@ -122,7 +143,7 @@
           <p class="help-block"></p>
       </div>
   </div>
-  <!-- region input-->
+  region input
 </div>
 
 
@@ -149,7 +170,7 @@
 </div>
 
 <div class="col-sm-6">
-  <!-- country select -->
+  country select 
   <div class="control-group">
       <label class="control-label c">Country</label>
       <div class="">
@@ -399,114 +420,120 @@
        </div>
 
 
-       <!-- postal-code input-->
+       postal-code input-->
+              <div class="row">
+              </div>
+            </div>
 
-
-           </div>
-       </div>
-
-</form>
-</div>
+            </form>
+          </div>
 
         </div>
-</div><!-- panel -->
-
       </div>
-      <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Donation Details</h3>
-            </div>
-<div class="panel-body">
-      <div class="col-sm-6">
-        <div class="form-group">
-            <label for="cardNumber">Amount</label>
-            <div class="input-group">
-                <input type="text" class="form-control" name="Amount" placeholder="$129.00" required autofocus  />
-                <span class="input-group-addon"><i class="fa fa-usd"></i></span>
-            </div>
-        </div>
-      </div>
+      <!-- panel -->
 
-
-<div class="col-sm-6">
-  <label for="donateTye">Frequency</label>
-      <select name="donateType" id="donateType" class="form-control">
-
-      <option value="once">Once</option>
-
-      <option value="weekly">Weekly</option>
-  <option value="Fortnightly">Fortnightly</option>
-  <option value="Monthly">Monthly</option>
-
-      </select>
-</div>
-</div>
-</div>
-
-
-
-      </div>
-
-        <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Payment Details</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form" id="payment-form">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="cardNumber">CARD NUMBER</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" name="cardNumber" placeholder="Valid Card Number" required autofocus data-stripe="number" />
-                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 col-md-7">
-                                <div class="form-group">
-                                    <div class="row">
-                                      <div class="col-sm-12">
-                                        <label for="expMonth">EXPIRATION DATE</label>
-                                      </div>
-                                    </div>
-                                  <div class="row">
-                                    <div class="col-xs-6 col-lg-6 pl-ziro">
-                                        <input type="text" class="form-control" name="expMonth" placeholder="MM" required data-stripe="exp_month" />
-                                    </div>
-                                    <div class="col-xs-6 col-lg-6 pl-ziro">
-                                        <input type="text" class="form-control" name="expYear" placeholder="YY" required data-stripe="exp_year" />
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-5 col-md-5 pull-right">
-                                <div class="form-group">
-                                    <label for="cvCode">CV CODE</label>
-                                    <input type="password" class="form-control" name="cvCode" placeholder="CV" required data-stripe="cvc" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <button class="btn btn-success btn-lg btn-block" type="submit">Donate Now</button>
-                            </div>
-                        </div>
-                        <div class="row" style="display:none;">
-                            <div class="col-xs-12">
-                                <p class="payment-errors"></p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Donation Details</h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="cardNumber">Amount</label>
+              <div class="input-group">
+                <input type="text" class="form-control" name="Amount" placeholder="$129.00" required autofocus />
+                <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6">
+            <label for="donateTye">Frequency</label>
+            <select name="donateType" id="donateType" class="form-control">
+
+              <option value="once">Once</option>
+
+              <option value="weekly">Weekly</option>
+              <option value="Fortnightly">Fortnightly</option>
+              <option value="Monthly">Monthly</option>
+
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="col-xs-12 " style = "margin-top: 20px">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Payment Details</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form" id="payment-form">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <div class="col-sm-12">
+                  <label for="cardNumber">CARD NUMBER</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="cardNumber" placeholder="Valid Card Number" required
+                      autofocus data-stripe="number" />
+                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-7 col-md-7">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label for="expMonth">EXPIRATION MONTH</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-7 col-lg-6 pl-ziro">
+                      <input type="text" class="form-control" name="expMonth" placeholder="MM" required
+                        data-stripe="exp_month" />
+                    </div>
+                    <div class="col-xs-6 col-lg-6 pl-ziro">
+                      <label for= "YEAR"> EXPIRATION YEAR </label>
+                      <input type="text" class="form-control" name="expYear" placeholder="YY" required
+                        data-stripe="exp_year"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-5 col-md-5 pull-right">
+                <div class="form-group">
+                  <label for="cvCode">CV CODE</label>
+                  <input type="password" class="form-control" name="cvCode" placeholder="CV" required
+                    data-stripe="cvc" />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12" style = "margin-right: 20px">
+                <button class="btn btn-success btn-lg btn-block" type="submit">Donate Now</button>
+              </div>
+            </div>
+            <div class="row" style="display:none;">
+              <div class="col-xs-12">
+                <p class="payment-errors"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
 </body>
