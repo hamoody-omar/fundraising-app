@@ -66,11 +66,19 @@
 
     <div class="row">
       <div class="col-md-8 mb-5">
+      {% if campaign_name %}
         <h2>{{campaign_name}} Campaign</h2>
         <hr>
         <p>For the {{campaign_name}} campaign, we have raised <span style="color: green, font-size: 24">${{total}}</span> so far.</p>
         <p>Donate today and be part of our lives saving work.</p>
         <a class="btn btn-primary btn-lg" href="/donate/">Donate Today &raquo;</a>
+      {% else %}
+      <h2>There are no campaigns running at the moment</h2>
+        <hr>
+        <p>Donate today and be part of our lives saving work.</p>
+        <a class="btn btn-primary btn-lg" href="/donate/">Donate Today &raquo;</a>
+      {% endif %}
+
       </div>
       <div class="col-md-4 mb-5">
         <h2>Contact Us</h2>
