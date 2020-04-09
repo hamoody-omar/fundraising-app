@@ -40,6 +40,9 @@ class Sponsor(models.Model):
     is_offer_accepted = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=now)
 
+    def __str__(self):
+        return self.company_name
+
 class SponsorSponsorship(models.Model):
     sponsorship = models.ForeignKey(Sponsorship, on_delete=models.CASCADE, verbose_name="the related sponsorship", db_index=True)
     sponsor = models.ForeignKey(Sponsor, on_delete=models.CASCADE, verbose_name="the related sponsor", db_index=True)
