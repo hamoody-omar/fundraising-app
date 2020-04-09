@@ -7,10 +7,11 @@ def index(request):
     context_dict['campaign_name'] = donation.name
     donors = Donor.objects.filter()
     total = 0
+
     for donor in donors:
         total += donor.amount
     donation.amount = total
-    donation.goal=10000
+    donation.goal=250000
     donation.save()
     context_dict['goal']=donation.goal
     context_dict['total'] = total
