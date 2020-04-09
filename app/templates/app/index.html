@@ -16,7 +16,7 @@
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{% static 'app/business-frontpage.css' %}">
- 
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -62,9 +62,9 @@
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
           <h1 class="display-4 text-white mt-5 mb-2"> Help us fight COVID-19 </h1>
-          <p class="lead mb-5 text-white-50">The world is facing an unprecedented challenge with communities and economies everywhere affected 
-            by the growing COVID-19 pandemic. The world is coming together to combat the COVID-19 pandemic bringing governments, 
-            organizations from across industries and sectors and individuals together to help respond to this global outbreak. 
+          <p class="lead mb-5 text-white-50">The world is facing an unprecedented challenge with communities and economies everywhere affected
+            by the growing COVID-19 pandemic. The world is coming together to combat the COVID-19 pandemic bringing governments,
+            organizations from across industries and sectors and individuals together to help respond to this global outbreak.
             The outpouring of global solidarity and support sparked by this shared challenge has been phenomenal.. </p>
         </div>
       </div>
@@ -73,19 +73,19 @@
 
   <!-- Page Content -->
   <div class="container">
-    
-          
+
+
     <div class="row">
       <div class="col-md-8 mb-5">
       {% if campaign_name %}
         <h2>{{campaign_name}} Campaign</h2>
         <hr>
-        <p>For the {{campaign_name}} campaign, we have raised <span style="color: green;font-size:x-large;">${{total}}</span> so far with a goal of 
+        <p>For the {{campaign_name}} campaign, we have raised <span style="color: green;font-size:x-large;">${{total}}</span> so far with a goal of
           <span style="color:red; font-size:x-large;">${{goal}}</span>.</p>
           {%if percent >= 100 %}
           <p>Thanks to your help, we have met our goal!</p>
           {%endif%}
-        
+
         <div class="progress" style="height:30px; margin-bottom:2em;">
           {% if percent >= 100 %}
           <div class="progress-bar" role="progressbar" aria-valuenow="100"
@@ -113,8 +113,8 @@
       {% endif %}
 
       </div>
-      
-  
+
+
       <div class="col-md-4 mb-5">
         <h2>Contact Us</h2>
         <hr>
@@ -164,7 +164,7 @@
             <p class="card-text"> - Sponsorship wording here -</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href=/sponsor/ class="btn btn-primary">Sponsor our cause!</a>
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@
     <!-- /.container -->
   </footer>
 
-  
+
 
 </body>
 
