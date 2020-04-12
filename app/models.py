@@ -20,6 +20,9 @@ class Donor(models.Model):
     phone_number = models.CharField(max_length=20, default='')
     created_at = models.DateTimeField(default=now)
 
+    def __str__(self):
+        return self.full_name
+
 class DonorDonation(models.Model):
     donation = models.ForeignKey(Donation, on_delete=models.CASCADE, verbose_name="the related donation", db_index=True)
     donor = models.ForeignKey(Donor, on_delete=models.CASCADE, verbose_name="the related donor", db_index=True)
@@ -29,6 +32,9 @@ class Sponsorship(models.Model):
     goal = models.CharField(max_length=2000, default='')
     amount = models.DecimalField(decimal_places=2, max_digits=100, default=0)
     created_at = models.DateTimeField(default=now)
+    
+    def __str__(self):
+        return self.name
 
 class Sponsor(models.Model):
     company_name = models.CharField(max_length=200, default='')

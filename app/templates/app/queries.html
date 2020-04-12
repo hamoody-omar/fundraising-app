@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{% static 'app/business-frontpage.css' %}">
+
+</head>
+
+<!-- Navigator -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Records</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+    <form role="form" name="queries" href="/queries/" method="POST">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+
+          {% csrf_token %}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Record Look Up</h3>
+            </div>
+            <div class="panel-body">
+              <div class="bodyTest">
+                  <div class="row">
+                    <div class="col-sm-6">
+
+                      <!-- Record Type-->
+                      <div class="form-group">
+                        <label for="Frequency">Select Record Type:</label>
+                        <select class="form-control" id="freq">
+                            <option>Monthly</option>
+                            <option>Quarterly</option>
+                            <option>Yearly</option>
+                          </select>
+                          <p class="help-block"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--if monthly select month-->
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <label for="Month">Select the Month:</label>
+                          <select class="form-control" id="month">
+                              <option>January</option>
+                              <option>February</option>
+                              <option>March</option>
+                              <option>April</option>
+                              <option>May</option>
+                              <option>June</option>
+                              <option>July</option>
+                              <option>August</option>
+                              <option>September</option>
+                              <option>October</option>
+                              <option>November</option>
+                              <option>December</option>
+                            </select>
+                          <p class="help-block"></p>
+                        </div>
+                      </div>
+                      <!--if Quarterly select Quarter-->
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="Quart">Select the Month:</label>
+                            <select class="form-control" id="quart">
+                                <option>1st Quarter(Jan-Mar)</option>
+                                <option>2nd Quarter(Apr-Jun)</option>
+                                <option>3rd Quarter(Jul-Sep)</option>
+                                <option>4th Quarter(Oct-Dec)</option>
+                              </select>
+                            <p class="help-block"></p>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="Year" class="control-label">Type in Year</label>
+                            <div class="">
+                              <input id="Year" name="year" type="text" class="form-control">
+                              <p class="help-block"></p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </form>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <button class="btn btn-success btn-lg btn-block" type="submit">Show Records</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+</body>
