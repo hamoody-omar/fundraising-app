@@ -6,16 +6,16 @@ def queries(request):
     context_dict = {}
     if request.POST:
         try:
-            sponsors = Sponsor.objects.all()
+            sponsors = Sponsor.object.all()
+
+            reptype= request.POST['reptype']
             sel_month= request.POST['month']
             sel_quarter= request.POST['quart']
-            sel_year= request.POST['Year']
+            sel_year= request.POST['year']
 
-            sponsors.filter(created_at__year=sel_year).aggregate(Yearly=Sum('offer'))
-            sponsors.filter(created_at__month=sel_month).aggregate(Monthly=Sum('offer'))
-            sponsors.filter(created_at__quarter=sel_quarter).aggregate(Quarterly=Sum('offer'))
+            print(sponsors.filter(created_at__year=sel_year).aggregate(Yearly=Sum('offer')))
 
-            redirect('/')
+            return redirect('/')
         except:
             return render(request, 'app/queries.html', context_dict)
     else:

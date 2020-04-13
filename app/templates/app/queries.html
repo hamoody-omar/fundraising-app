@@ -55,60 +55,60 @@
                     <div class="col-sm-6">
 
                       <!-- Record Type-->
-                      <div class="form-group">
-                        <label for="Frequency">Select Record Type:</label>
-                        <select class="form-control" id="freq">
-                            <option>Monthly</option>
-                            <option>Quarterly</option>
-                            <option>Yearly</option>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <label class="input-group-text" for="type">Report Type</label>
+                          </div>
+                          <select class="custom-select" id="reptype">
+                            <option selected>Choose...</option>
+                            <option value="1">Monthly</option>
+                            <option value="2">Quarterly</option>
+                            <option value="3">Yearly</option>
                           </select>
-                          <p class="help-block"></p>
                         </div>
                       </div>
                     </div>
                     <!--if monthly select month-->
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                          <label for="Month">Select the Month:</label>
-                          <select class="form-control" id="month">
-                              <option>January</option>
-                              <option>February</option>
-                              <option>March</option>
-                              <option>April</option>
-                              <option>May</option>
-                              <option>June</option>
-                              <option>July</option>
-                              <option>August</option>
-                              <option>September</option>
-                              <option>October</option>
-                              <option>November</option>
-                              <option>December</option>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="Month">Select Month</label>
+                        </div>
+                         <select class="custom-select" id="month">
+                             <option selected>Choose...</option>
+                             <option>January</option>
+                             <option>February</option>
+                             <option>March</option>
+                             <option>April</option>
+                             <option>May</option>
+                             <option>June</option>
+                             <option>July</option>
+                             <option>August</option>
+                             <option>September</option>
+                             <option>October</option>
+                             <option>November</option>
+                             <option>December</option>
                             </select>
-                          <p class="help-block"></p>
                         </div>
-                      </div>
                       <!--if Quarterly select Quarter-->
-                      <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="Quart">Select the Month:</label>
-                            <select class="form-control" id="quart">
-                                <option>1st Quarter(Jan-Mar)</option>
-                                <option>2nd Quarter(Apr-Jun)</option>
-                                <option>3rd Quarter(Jul-Sep)</option>
-                                <option>4th Quarter(Oct-Dec)</option>
-                              </select>
-                            <p class="help-block"></p>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <label class="input-group-text" for="Quart">Select Quarter</label>
                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label for="Year" class="control-label">Type in Year</label>
-                            <div class="">
-                              <input id="Year" name="year" type="text" class="form-control">
-                              <p class="help-block"></p>
+                           <select class="custom-select" id="quart">
+                               <option selected>Choose...</option>
+                               <option>1st Quarter(Jan-Mar)</option>
+                               <option>2nd Quarter(Apr-Jun)</option>
+                               <option>3rd Quarter(Jul-Sep)</option>
+                               <option>4th Quarter(Oct-Dec)</option>
+                           </select>
+                          </div>
+                          <!--if Year type year-->
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">Year</span>
                             </div>
+                            <input type="text" class="form-control" placeholder="Year" aria-label="year" aria-describedby="basic-addon1">
                           </div>
-                        </div>
                   </div>
                 </div>
             </div>
