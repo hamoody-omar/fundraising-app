@@ -29,7 +29,7 @@
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="/queries/">Records</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
@@ -53,7 +53,16 @@
               <div class="bodyTest">
                   <div class="row">
                     <div class="col-sm-6">
-
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text" for="type">Which Records</label>
+                            </div>
+                            <select class="custom-select" name="whichrec" id="whichrec">
+                              <option selected>Choose...</option>
+                              <option value="1">Donations</option>
+                              <option value="2">Sponsorships</option>
+                            </select>
+                          </div>
                       <!-- Record Type-->
                       <div class="input-group mb-3">
                           <div class="input-group-prepend">
